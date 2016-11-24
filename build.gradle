@@ -12,7 +12,7 @@ apply plugin: 'maven-publish';
 apply plugin: 'com.jfrog.bintray'
 
 archivesBaseName = 'warp10-quantum-plugin'
-def quantumVersion = '2.1.48'
+def quantumVersion = '2.1.49'
 version = quantumVersion
 group = 'io.warp10'
 
@@ -21,7 +21,7 @@ targetCompatibility = 1.7
 
 //
 // Repositories for dependency resolution
-// For all subprojects
+//
 repositories {
   jcenter()
   mavenCentral()
@@ -65,6 +65,18 @@ idea {
     inheritOutputDirs = true
     scopes.PROVIDED.plus += [configurations.provided]
   }
+}
+
+shadowJar {
+  manifest {
+    attributes(
+        'Main-Class': 'io.warp10.quantum.Main'
+    )
+  }
+  relocate 'org', 'io.warp10.quantum.org'
+  relocate 'jetty', 'io.warp10.quantum.jetty'
+  relocate 'javax', 'io.warp10.quantum.javax'
+  classifier = null
 }
 
 publishing {
