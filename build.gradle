@@ -50,7 +50,7 @@ configurations {
 }
 
 dependencies {
-  provided group:'io.warp10', name: 'warpscript', version: '1.2.5-rc8'
+  provided group:'io.warp10', name: 'warpscript', version: '1.2.10-rc2'
   compile group:'io.warp10', name: 'warp10-quantum-server', version: quantumVersion
 }
 
