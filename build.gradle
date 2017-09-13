@@ -26,6 +26,12 @@ repositories {
   jcenter()
   mavenCentral()
   mavenLocal()
+  maven {
+    url 'https://repository.apache.org/content/groups/public'
+  }
+  maven {
+    url "http://maven.twttr.com"
+  }
 
   maven {
     url 'https://dl.bintray.com/cityzendata/maven'
@@ -39,7 +45,6 @@ repositories {
     url 'https://dl.bintray.com/hbs/maven'
   }
 
-  // bedatadriven - http://www.renjin.org/#downloads
   maven {
     url "http://nexus.bedatadriven.com/content/groups/public/"
   }
