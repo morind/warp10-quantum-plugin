@@ -12,7 +12,7 @@ apply plugin: 'maven-publish';
 apply plugin: 'com.jfrog.bintray'
 
 archivesBaseName = 'warp10-quantum-plugin'
-def quantumVersion = '2.6.5'
+def quantumVersion = '2.6.6'
 version = quantumVersion
 group = 'io.warp10'
 
